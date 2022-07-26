@@ -1,8 +1,10 @@
-# Hot to use
+# How to use
 
-   pyenv virtualenv cvd
-   pyenv activate cvd
-   pip install click
-   add2virtualenv .
+```
+pyenv virtualenv cvd
+pyenv activate cvd
+pip install click
+add2virtualenv .
 
-   ./bin/cvd load registered_voters.db
+./bin/cvd load registered_voters.db
+```
