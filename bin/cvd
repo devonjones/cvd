@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+import json as jsonlib
+import sys
+
+import click
+
+from cvd.database import load_db
+
+@click.group()
+@click.pass_context
+def cli(ctx):
+    ctx.ensure_object(dict)
+
+@cli.command()
+@click.argument('database')
+@click.pass_context
+def load(ctx, database):
+    load_db(database)
+
+if __name__ == '__main__':
+    sys.exit(cli(obj={}))
